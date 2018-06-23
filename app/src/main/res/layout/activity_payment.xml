@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/activityLabel"
+        android:text="@string/payment_label"/>
+
+    <TextView
+        android:id="@+id/paymentText"
+        style="@style/activityLabel"
+        android:padding="5dp"
+        android:layout_below="@+id/label"
+        android:text="@string/paymentDescription" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/paymentText">
+
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/homeButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/home_text"/>
+                <Button
+                    android:id="@+id/libraryButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/library_text"/>
+                <Button
+                    android:id="@+id/albumButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/album_text"/>
+                <Button
+                    android:id="@+id/artistButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/artist_text"/>
+                <Button
+                    android:id="@+id/playlistButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/playlist_text"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:id="@+id/wallet_button_holder"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true">
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/request_fullwallet"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:onClick="requestFullWallet"
+        android:text="@string/confirm_text"
+        android:layout_below="@+id/wallet_button_holder"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

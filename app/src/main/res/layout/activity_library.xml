@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/activityLabel"
+        android:text="@string/library_label"/>
+
+    <TextView
+        android:id="@+id/libraryText"
+        style="@style/activityLabel"
+        android:padding="5dp"
+        android:layout_below="@+id/label"
+        android:text="@string/libraryDescription"/>
+
+    <LinearLayout
+        android:background="#999"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/libraryText">
+
+        <SearchView
+            android:id="@+id/search_bar"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:queryHint="Search Library">
+        </SearchView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/homeButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/home_text"/>
+                <Button
+                    android:id="@+id/albumButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/album_text"/>
+                <Button
+                    android:id="@+id/artistButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/artist_text"/>
+                <Button
+                    android:id="@+id/playlistButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/playlist_text"/>
+                <Button
+                    android:id="@+id/paymentButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/payment_text"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/linearLayout"
+        android:layout_above="@+id/view2">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/linearLayout">
+
+            <ListView
+                android:id="@+id/songsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"/>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/nowPlaying"
+        android:background="#555"
+        android:id="@+id/view2">
+    </View>
+    <RelativeLayout
+        android:id="@+id/nowPlaying"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true">
+
+
+        <ImageView
+            android:id="@+id/art"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/songName"
+            android:layout_marginLeft="10dp"
+            android:text="@string/nowplaying_text"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/play" />
+    </RelativeLayout>
+
+</RelativeLayout>

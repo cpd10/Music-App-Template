@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Project_4</string>
+    <string name="home_text">HOME</string>
+    <string name="nowplaying_text">NOW PLAYING</string>
+    <string name="library_text">LIBRARY</string>
+    <string name="album_text">ALBUM</string>
+    <string name="artist_text">ARTIST</string>
+    <string name="playlist_text">PLAYLIST</string>
+    <string name="payment_text">PAYMENT</string>
+    <string name="confirm_text">CONFIRM</string>
+    <string name="home_label">HOME ACTIVITY</string>
+    <string name="nowplaying_label">NOW PLAYING ACTIVITY</string>
+    <string name="library_label">LIBRARY ACTIVITY</string>
+    <string name="album_label">ALBUM ACTIVITY</string>
+    <string name="artist_label">ARTIST ACTIVITY</string>
+    <string name="playlist_label">PLAYLIST ACTIVITY</string>
+    <string name="payment_label">PAYMENT ACTIVITY</string>
+    <string name="confirm_label">CONFIRM ACTIVITY</string>
+    <string name="mainDescription">This is the home screen. There is a now playing bar, which is clickable, as well as buttons to the other activities.</string>
+    <string name="libraryDescription">This is the library screen. It would list all stored songs and show currently playing song. The now playing bar is also clickable.</string>
+    <string name="nowplayingDescription">This is the now playing screen. You have media player controls and the now playing bar is clickable. Clicking the now playing bar takes you back to the prior activity.</string>
+    <string name="paymentDescription">This is the payment screen. It\'s the android pay api. It can be used to make payments within the app.</string>
+</resources>

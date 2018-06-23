@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.project_4.MainActivity">
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/activityLabel"
+        android:text="@string/nowplaying_label"/>
+
+    <TextView
+        android:id="@+id/describeText"
+        style="@style/activityLabel"
+        android:padding="5dp"
+        android:layout_below="@+id/label"
+        android:text="@string/nowplayingDescription"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/describeText"
+        android:id="@+id/nowPlaying"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/more_vert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/nowplaying_text"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
+            android:layout_above="@+id/songName"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/nowPlaying"
+        android:background="#555"
+        android:id="@+id/view">
+    </View>
+
+    <ImageView
+        android:id="@+id/bigAlbumArt"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@+id/view"
+        android:layout_centerHorizontal="true" />
+    <RelativeLayout
+        android:id="@+id/controls"
+        android:layout_above="@+id/seekBar"
+        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:src="@drawable/play"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/forwardButton"
+        android:layout_width="wrap_content"
+        android:src="@drawable/forward10"
+        android:layout_toRightOf="@+id/nextButton"
+        android:layout_marginRight="5dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:src="@drawable/back10"
+        android:layout_toLeftOf="@+id/previousButton"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:src="@drawable/next"
+        android:layout_toRightOf="@+id/playButton"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/previousButton"
+        android:layout_width="wrap_content"
+        android:src="@drawable/previous"
+        android:layout_toLeftOf="@+id/playButton"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:id="@+id/currentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:id="@+id/totalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"/>
+</RelativeLayout>

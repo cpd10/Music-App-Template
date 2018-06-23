@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.project_4.MainActivity">
+
+    <TextView
+        android:id="@+id/label"
+        style="@style/activityLabel"
+        android:text="@string/home_label"/>
+
+    <TextView
+        android:id="@+id/describeText"
+        style="@style/activityLabel"
+        android:padding="5dp"
+        android:layout_below="@+id/label"
+        android:text="@string/mainDescription"/>
+
+
+    <LinearLayout
+        android:background="#999"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/describeText"
+        android:layout_alignParentStart="true">
+
+        <SearchView
+            android:id="@+id/search_bar"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:queryHint="Search Library">
+        </SearchView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/libraryButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/library_text"/>
+                <Button
+                    android:id="@+id/albumButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/album_text"/>
+                <Button
+                    android:id="@+id/artistButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/artist_text"/>
+                <Button
+                    android:id="@+id/playlistButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/playlist_text"/>
+                <Button
+                    android:id="@+id/paymentButton"
+                    style="@style/buttonTheme"
+                    android:text="@string/payment_text"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/nowPlaying"
+        android:background="#555">
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/nowPlaying"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:layout_alignParentBottom="true">
+
+
+        <ImageView
+            android:id="@+id/art"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nowplaying_text"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:layout_above="@+id/songName"/>
+
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageView
+            android:id="@+id/playButton"
+            android:layout_width="wrap_content"
+            android:src="@drawable/play"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"/>
+    </RelativeLayout>
+</RelativeLayout>
